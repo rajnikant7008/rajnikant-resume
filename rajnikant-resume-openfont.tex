@@ -1,0 +1,241 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{rajnikant-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Rajnikant}{Raman}{ 
+	\urlstyle{same}\url{http://rajnikant7008.github.io} \\
+\href{mailto:rajnikant7008@gmail.com}{rajnikant7008@gmail.com} | +91-9631419656
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{National Institute of Technology}
+\descript{B.Tech in Information Technology}
+\location{Cum. GPA: 9.12, Rank: 1}
+\location{ July 2011 - May 2015 | Patna, India}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/rajnikant7008}{\custombold{rajnikant7008}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/rajnikant7008}{\custombold{rajnikant7008}} \\
+Skype://  {\custombold{rajnik914}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+Java \textbullet{}  Python \textbullet{} SQL \textbullet{} C \\ 
+Shell Scripting \textbullet{} AngularJS \\
+HTML/CSS \textbullet{} JavaScript
+\sectionsep
+
+\subsection{Technologies}
+ Kafka   \textbullet{} Hadoop \\
+ RESTful Web Services
+ \sectionsep
+ 
+\location{Framework}
+ Spring MVC \textbullet{} Hibernate \\ 
+ MapReduce  \textbullet{} Spring Boot
+\sectionsep
+
+\location{Databases}
+ Cassandra  \textbullet{} MySQL \textbullet{} MongoDB \\
+   Elasticsearch 
+  \textbullet{} Aerospike \textbullet{} Vertica
+ \sectionsep
+ 
+ \location{Amazon Web Services}
+ S3  \textbullet{} EC2  \textbullet{} Redshift \textbullet{} SQS \\
+ Data Pipeline  \textbullet{} CloudWatch‎ 
+  
+ \sectionsep
+ 
+ \location{Tools}
+      Maven \textbullet{} Tomcat \textbullet{} Git \\
+       Scikit-Learn  \textbullet{} IntelliJ IDEA \\
+      JMeter \textbullet{} cTAKES \textbullet{} Eclipse 
+\sectionsep
+
+
+
+\section{Coursework}
+\subsection{Undergraduate}
+Operating Systems \\
+Artificial Intelligence + Practicum \\
+Distributed Systems \\
+Data Structures and Algorithms\\
+Unix Systems 
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{\href{https://www.bankbazaar.com}{BANKBAZAAR}}
+\descript{| Senior Software Engineer }
+\location{ Dec 2016 – Present | Bengaluru, India}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item \custombold{Personalization:}  Building and designing services to ingest millions of customer data across the platform on a
+real-time basis and unite them into a single profile per customer. These profiles are being used in recommendation engine.
+\item \custombold{Data Warehousing:} Setup, schema design and management of Analytics DB. Built an internal engine to
+access the data using a web interface. Bulk data processing with Hadoop for daily ETL injection into Amazon Redshift.
+
+\end{tightemize}
+\sectionsep
+
+
+\runsubsection{\href{https://www.snapdeal.com}{SNAPDEAL}}
+\descript{| Software Engineer}
+\location{July 2015 - Nov 2016 | Bengaluru, India}
+\begin{tightemize}
+\item Built machine learning system to set up the ranking mechanism of products. 
+\item Developed highly scalable APIs with average and 99 \% response time under 20ms handling approx. 300k requests per min to cater several clients of user generated content.
+\item Designed and built dashboard for the moderation  and search of the user generated content.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Indian Institute of Technology}
+\descript{| Research Intern}
+\location {May 2014 - July 2014 | Patna, India}
+\begin{tightemize}
+\item  \custombold{Analysis of Clinical Text:} Designed and implemented an intelligent system for disorder mention detection from
+patient records by combining supervised methods for text analysis with unsupervised ones. The purpose of this
+task was to enhance current research in NLP methods used in the clinical domain.
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\location{Privacy Enhancement in Email Clients}
+Designed and tweaked an open source E-mail client to improve privacy features in web mail clients from both sender and receiver perspective.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Publications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications}
+\textbullet{}  \href{https://rd.springer.com/chapter/10.1007/978-3-319-32467-8_118}{ \custombold{Privacy Enhancement in E-Mail Clients:}} Published by Springer International \\ \hspace{9pt}Publishing Switzerland. \\
+\textbullet{}  \custombold{Product Quality Prediction in a Large E-commerce Environment:} Published \\ \hspace{8pt} as White Paper at Snapdeal.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Achievements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Achievements} 
+\sectionsep
+\begin{tightemize}
+	\item  Honored with Gold Award from Snapdeal for excellence, innovation, quality and growth.
+	\item Sole recipient of Director's Gold Medal at undergraduate level, NIT Patna.
+	\item Winner of Algo-Z-Ripper (Annual coding competition at NIT Patna).
+	\item Runner up in WebWeaver (Annual web designing competition at NIT Patna).
+	\item Served as core team member of official Web Development Team at NIT Patna.
+	\item Winner of science quiz at district level organised by Indian Culture Knowledge Haridwar.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
