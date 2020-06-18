@@ -1,5 +1,5 @@
 % Intro Options
-\ProvidesClass{deedy-resume-openfont}[2014/04/30 CV class]
+\ProvidesClass{rajnikant-resume-openfont}[2020/06/19 CV class]
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
@@ -17,6 +17,7 @@
 \usepackage[UKenglish]{babel}
 \usepackage[UKenglish]{isodate}
 \usepackage{fontspec,xltxtra,xunicode}
+\usepackage{parskip}
 
 % Color definitions
 \definecolor{date}{HTML}{666666} 
