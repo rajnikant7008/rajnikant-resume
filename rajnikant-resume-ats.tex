@@ -1,0 +1,119 @@
+%% One-page resume — Rajnikant Raman (ATS-optimized, single-column)
+\documentclass[9pt,a4paper]{article}
+
+\usepackage[top=0.35in, bottom=0.3in, left=0.5in, right=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+
+\definecolor{dark}{RGB}{30,30,30}
+\definecolor{mid}{RGB}{90,90,90}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+\color{dark}
+
+%% Section headings
+\titleformat{\section}
+  {\small\bfseries\scshape}{}{0em}{}[\vspace{-5pt}\rule{\linewidth}{0.4pt}]
+\titlespacing{\section}{0pt}{4pt}{2pt}
+
+%% Bullet lists
+\setlist[itemize]{
+  leftmargin=12pt, topsep=1pt, itemsep=0.5pt,
+  parsep=0pt, label=\textbullet
+}
+
+% ═══════════════════════════════════════════
+\begin{document}
+
+%% ── HEADER ───────────────────────────────
+\begin{center}
+  {\LARGE\bfseries Rajnikant Raman}\\[2pt]
+  {\small Engineering Manager \textbar\ FinTech \& Payments \textbar\ Amsterdam, Netherlands}\\[2pt]
+  {\small
+    \href{mailto:rajnikant7008@gmail.com}{rajnikant7008@gmail.com}
+    | +31 627273340
+    | \href{https://rajnikant7008.github.io}{rajnikant7008.github.io}
+    | \href{https://linkedin.com/in/rajnikant7008}{linkedin.com/in/rajnikant7008}
+  }
+\end{center}
+
+\vspace{2pt}
+
+%% ── SUMMARY ──────────────────────────────
+\section{Summary}
+{\small Engineering leader with 11+ years building mission-critical payment systems at global scale. Track record of scaling platforms 50x, hiring and growing high-performing teams, and establishing org-wide engineering culture and standards. Skilled in performance management, OKR-driven planning, technical strategy, and aligning engineering with business outcomes across product, commercial, and partner stakeholders.}
+
+%% ── EXPERIENCE ───────────────────────────
+\section{Experience}
+
+\textbf{\href{https://www.adyen.com}{Adyen}} -- Engineering Manager \hfill Jul 2022 -- Present\\
+{\small\color{mid} Amsterdam, Netherlands | Senior Engineer to Engineering Manager, promoted within 8 months}
+\begin{itemize}
+  \item Lead IPP Scalability team of 6 engineers, scaling platform 50x -- enabling 1M+ concurrent connections with latency under 100ms for global merchants across millions of devices.
+  \item Grow engineers through hands-on hiring, performance management, and structured mentorship -- building an engineering culture of ownership, career development, and clear progression at all levels.
+  \item Own cross-functional technical strategy across product, commercial and partner stakeholders -- translating business goals into engineering roadmaps and delivery commitments.
+  \item Establish org-wide engineering standards -- defining ways of working, quality benchmarks and developer experience practices across the organization.
+\end{itemize}
+
+\vspace{1pt}
+\textbf{\href{https://www.zettle.com/gb}{Zettle by PayPal}} -- Senior Backend Developer \hfill May 2019 -- Jun 2022\\
+{\small\color{mid} Stockholm, Sweden}
+\begin{itemize}
+  \item Delivered compliance solutions supporting migration of millions of merchants across Europe in response to regulatory and banking license changes.
+  \item Developed KYC/KYB risk systems for merchant onboarding and activity monitoring, improving detection of high-risk events and platform security.
+  \item Evolved compliance platform architecture using Java, AWS and event-driven design to deliver scalable, secure backend systems.
+\end{itemize}
+
+\vspace{1pt}
+\textbf{\href{https://www.bankbazaar.com}{BankBazaar}} -- Senior Software Engineer \hfill Dec 2016 -- May 2019\\
+{\small\color{mid} Bangalore, India}
+\begin{itemize}
+  \item Architected a customer data platform using Java, Kafka and Cassandra -- processing millions of real-time events to build unified customer profiles, powering personalization and recommendation capabilities.
+  \item Built org-wide ETL pipelines processing tens of millions of events, enabling enterprise reporting and data-driven decision-making.
+  \item Mentored engineers and drove cross-team alignment on platform design and data architecture decisions.
+\end{itemize}
+
+\vspace{1pt}
+\textbf{\href{https://www.snapdeal.com}{Snapdeal}} -- Software Engineer \hfill Jul 2015 -- Nov 2016\\
+{\small\color{mid} Bangalore, India}
+\begin{itemize}
+  \item Built end-to-end ML pipeline for product ranking -- data pre-processing, feature extraction, model training and real-time prediction -- enhancing discovery across high-traffic e-commerce.
+  \item Built scalable UGC platforms and APIs serving 5K+ TPS with p99 latency under 10ms.
+\end{itemize}
+
+%% ── SKILLS ───────────────────────────────
+\section{Skills}
+\textbf{Leadership:} Technical Strategy, Org Design, Team Scaling, Hiring, Performance Management, Engineering Culture, OKR Planning, Talent Development, Stakeholder Management, Operational Excellence\\[1pt]
+\textbf{Technical:} Java, Python, Kotlin, Go, Spring Boot, Dropwizard, Terraform, Pulumi, Docker, Kubernetes, Nomad\\[1pt]
+\textbf{Data \& Infrastructure:} Kafka, RabbitMQ, PostgreSQL, CockroachDB, Cassandra, Redis, MongoDB, Elasticsearch, Grafana, Splunk\\[1pt]
+\textbf{Cloud \& Architecture:} AWS, Google Cloud Platform, Distributed Systems Design, WebSocket, Real-time Streaming
+
+%% ── ACHIEVEMENTS ─────────────────────────
+\section{Achievements}
+\begin{itemize}
+  \item \textbf{Speaker, Adyen Annual Conference 2025} -- Presented Public Cloud vision to 1,500+ attendees.
+  \item \textbf{PayPal Spot Award 2021} -- Led European compliance migration across multiple stakeholder teams.
+  \item \textbf{Snapdeal Gold Award 2016} -- Built end-to-end ML product ranking pipeline.
+  \item \textbf{Director's Gold Medal 2015} -- Ranked 1st in B.Tech, NIT Patna, GPA 9.12.
+\end{itemize}
+
+%% ── EDUCATION ────────────────────────────
+\section{Education}
+\textbf{\href{https://www.nitp.ac.in/}{National Institute of Technology, Patna}} -- B.Tech, Information Technology \hfill Jul 2011 -- May 2015\\
+{\small GPA: 9.12 | Rank: 1 | Director's Gold Medal}
+
+%% ── PUBLICATIONS ─────────────────────────
+\section{Publications}
+\begin{itemize}
+  \item \href{https://rd.springer.com/chapter/10.1007/978-3-319-32467-8_118}{\textbf{Privacy Enhancement in E-Mail Clients}} -- Springer International Publishing Switzerland, 2016.
+  \item \textbf{Product Quality Prediction in a Large E-commerce Environment} -- Internal Research, Snapdeal, 2016.
+\end{itemize}
+
+\end{document}

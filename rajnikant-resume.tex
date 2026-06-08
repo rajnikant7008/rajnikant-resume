@@ -1,0 +1,199 @@
+%% One-page resume — Rajnikant Raman (Human-reader, premium version)
+\documentclass[9pt,a4paper]{article}
+
+\usepackage[top=0.45in, bottom=0.4in, left=0.55in, right=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[default]{sourcesanspro}
+\usepackage{microtype}
+\linespread{1.06}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage[framemethod=none]{mdframed}
+
+\definecolor{dark}{RGB}{81,83,89}
+\definecolor{mid}{RGB}{126,129,139}
+\definecolor{soft}{RGB}{103,105,112}
+\definecolor{accent}{RGB}{63,108,182}
+\definecolor{lightbg}{RGB}{251,252,254}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+\color{dark}
+
+%% Section headings
+\titleformat{\section}
+  {\small\scshape\bfseries\color{accent}}{}{0em}{}[\vspace{-5pt}{\color{accent}\rule{\linewidth}{0.5pt}}]
+\titlespacing{\section}{0pt}{3pt}{2pt}
+
+%% Bullet lists — accent-colored bullets
+\setlist[itemize]{
+  leftmargin=9pt, topsep=1pt, itemsep=1.5pt,
+  parsep=0pt, label={\color{mid}\textbullet}
+}
+
+%% Summary box style — left accent border
+\mdfdefinestyle{summarybox}{%
+  leftline=true, rightline=false, topline=false, bottomline=false,
+  linewidth=2pt, linecolor=accent,
+  backgroundcolor=lightbg,
+  innerleftmargin=8pt, innerrightmargin=4pt,
+  innertopmargin=3pt, innerbottommargin=3pt,
+  skipabove=2pt, skipbelow=2pt
+}
+
+%% ── Helpers ──────────────────────────────
+\newcommand{\skill}[2]{%
+  \noindent{\textbf{\small #1}}\newline
+  \noindent{\footnotesize\setlength{\parskip}{0pt}#2}%
+  \par\vspace{2.5pt}%
+}
+
+\newcommand{\employer}[5]{%
+  \href{#5}{\textbf{#1}} \textbar\ {\small\scshape #2} \hfill {\small #3}\\[-1pt]
+  {\small\color{mid} #4}%
+}
+
+% ═══════════════════════════════════════════
+\begin{document}
+
+%% ── HEADER ───────────────────────────────
+\begin{center}
+  {\fontsize{20}{22}\selectfont\bfseries Rajnikant Raman}\\[2pt]
+  {\small\color{accent} Engineering Manager \textbar\ FinTech \& Payments \textbar\ Amsterdam}\\[3pt]
+  {\footnotesize\color{mid}
+    \href{https://rajnikant7008.github.io}{rajnikant7008.github.io}
+    \textbar\ \href{mailto:rajnikant7008@gmail.com}{rajnikant7008@gmail.com}
+    \textbar\ +31 627273340
+    \textbar\ \href{https://linkedin.com/in/rajnikant7008}{LinkedIn}
+    \textbar\ \href{https://github.com/rajnikant7008}{GitHub}
+  }
+\end{center}
+
+\vspace{1pt}
+
+%% ── SUMMARY ──────────────────────────────
+\begin{mdframed}[style=summarybox]
+{\small\color{soft} Engineering leader with 11+ years building mission-critical payment systems at global scale. Track record of scaling platforms {\color{accent}50x}, hiring and growing high-performing teams, and establishing org-wide engineering culture and standards. Focused on aligning technical strategy with business outcomes and scaling engineering organizations across FinTech \& Payments.}
+\end{mdframed}
+
+\vspace{1pt}
+
+%% ── TWO COLUMNS ──────────────────────────
+\noindent
+\begin{minipage}[t]{0.285\textwidth}
+\setlength{\parskip}{0pt}
+
+%% LEFT — Skills
+\section{Skills}
+\vspace{2pt}
+
+\skill{Leadership}{%
+  Engineering Management\newline
+  Technology Roadmapping\newline
+  Organizational Scaling\newline
+  Talent Development\newline
+  Stakeholder Management\newline
+  Operational Excellence%
+}
+
+\vspace{2pt}
+\skill{Programming}{Java {\color{mid}\textperiodcentered} Python {\color{mid}\textperiodcentered} Kotlin {\color{mid}\textperiodcentered} Go}
+
+\vspace{2pt}
+\skill{Technical}{%
+  Distributed Systems {\color{mid}\textperiodcentered} Real-time Streaming\newline
+  Kafka {\color{mid}\textperiodcentered} RabbitMQ {\color{mid}\textperiodcentered} WebSocket\newline
+  Cassandra {\color{mid}\textperiodcentered} Redis\newline
+  PostgreSQL {\color{mid}\textperiodcentered} MongoDB\newline
+  Terraform {\color{mid}\textperiodcentered} Docker\newline
+  Kubernetes {\color{mid}\textperiodcentered} Nomad\newline
+  AWS {\color{mid}\textperiodcentered} GCP\newline
+  Grafana {\color{mid}\textperiodcentered} Splunk%
+}
+
+%% LEFT — Education
+\vspace{5pt}
+\section{Education}
+{\small\textbf{\href{https://www.nitp.ac.in/}{NIT Patna}}}\newline
+{\footnotesize B.Tech — Information Technology\newline
+GPA: \textbf{9.12} \textbar\ Rank \textbf{1} \textbar\ \textit{Gold Medalist}\newline
+Jul 2011 -- May 2015}
+
+%% LEFT — Leadership Philosophy
+\vspace{5pt}
+\section{Philosophy}
+\vspace{2pt}
+{\footnotesize\color{soft}
+Invest in people first ---\newline
+great products follow.\par\vspace{3pt}
+Build trust before you need it.\par\vspace{3pt}
+Engineering excellence is a\newline
+culture, not a checklist.\par\vspace{3pt}
+Lead with clarity,\newline
+especially in ambiguity.%
+}
+
+\end{minipage}%
+\hfill%
+%% ── RIGHT COLUMN ─────────────────────────
+\begin{minipage}[t]{0.685\textwidth}
+\setlength{\parskip}{0pt}
+
+%% RIGHT — Experience
+\section{Experience}
+
+\employer{Adyen}{Engineering Manager}{Jul 2022 -- {\color{accent}\textbf{Present}}}{Amsterdam, Netherlands \textbar\ \textit{Senior Engineer \textrightarrow\ EM, promoted within 8 months}}{https://www.adyen.com}
+\begin{itemize}
+  \item Lead IPP Scalability team of {\color{accent}6 engineers}, owning platform strategy that scaled {\color{accent}50x} -- enabling 1M+ concurrent connections with sub-100ms latency across millions of devices globally.
+  \item Hire, develop and retain talent -- structured mentorship, clear career frameworks, and performance management that grew engineers into senior technical contributors.
+  \item Drive {\color{accent}cross-functional strategy} across product, commercial and partner stakeholders -- aligning engineering roadmaps with business outcomes and quarterly OKRs.
+  \item Define {\color{accent}org-wide engineering standards} -- ways of working and quality benchmarks adopted across multiple teams.
+\end{itemize}
+
+\vspace{8pt}
+\employer{Zettle by PayPal}{Senior Backend Developer}{May 2019 -- Jun 2022}{Stockholm, Sweden}{https://www.zettle.com/gb}
+\begin{itemize}
+  \item Led {\color{accent}cross-org compliance migration} -- coordinating legal, product and engineering to move millions of merchants under European regulatory changes.
+  \item Owned KYC/KYB risk platform end-to-end -- scoping requirements with stakeholders, designing systems, and driving execution across {\color{accent}multiple team boundaries}.
+  \item Mentored junior engineers and drove {\color{accent}architectural decision-making} for the compliance domain, establishing patterns adopted by adjacent teams.
+\end{itemize}
+
+\vspace{8pt}
+\employer{BankBazaar}{Senior Software Engineer}{Dec 2016 -- May 2019}{Bangalore, India}{https://www.bankbazaar.com}
+\begin{itemize}
+  \item Led design and delivery of a customer data platform processing millions of real-time events -- driving {\color{accent}cross-team alignment} on a unified architecture that powered personalization across the product.
+  \item Drove {\color{accent}org-wide data strategy} -- built ETL pipelines processing tens of millions of events, enabling executive reporting and data-driven prioritization.
+  \item Mentored engineers across teams, led architecture reviews, and established {\color{accent}technical decision-making practices} that improved delivery predictability.
+\end{itemize}
+
+\vspace{8pt}
+\employer{Snapdeal}{Software Engineer}{Jul 2015 -- Nov 2016}{Bangalore, India}{https://www.snapdeal.com}
+\begin{itemize}
+  \item Owned end-to-end ML pipeline for product ranking -- from problem framing through production deployment -- improving discovery metrics across high-traffic e-commerce.
+  \item Built scalable UGC platforms and APIs serving 5K+ TPS with p99 latency under 10ms.
+\end{itemize}
+
+%% RIGHT — Publications
+\section{Publications}
+\begin{itemize}[itemsep=2pt]
+  \item \href{https://rd.springer.com/chapter/10.1007/978-3-319-32467-8_118}{\textbf{Privacy Enhancement in E-Mail Clients}} \hfill {\small 2016}\\[-2pt]
+  {\small\color{mid} Springer International Publishing Switzerland}
+  \item \textbf{Product Quality Prediction in E-commerce} \hfill {\small 2016}\\[-2pt]
+  {\small\color{mid} Internal Research, Snapdeal}
+\end{itemize}
+
+%% RIGHT — Achievements
+\section{Achievements}
+\begin{itemize}[itemsep=2pt]
+  \item \textbf{Speaker,} Adyen Annual Conference 2025 {\small\color{mid}-- Presented Public Cloud vision to 1,500+ attendees.}
+  \item \textbf{PayPal Spot Award,} 2021 {\small\color{mid}-- Led European compliance migration across multiple stakeholder teams.}
+  \item \textbf{Snapdeal Gold Award,} 2016 {\small\color{mid}-- Built end-to-end ML product ranking pipeline.}
+  \item \textbf{Director's Gold Medal,} 2015 {\small\color{mid}-- Ranked 1st in B.Tech, NIT Patna, GPA 9.12.}
+\end{itemize}
+
+\end{minipage}
+
+\end{document}
